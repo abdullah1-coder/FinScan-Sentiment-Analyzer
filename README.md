@@ -45,8 +45,21 @@ The matrix demonstrates a remarkable ability to capture "Bullish" signals with v
 ```bash
 git clone [https://github.com/YOUR_USERNAME/FinScan-Sentiment-Analyzer.git](https://github.com/YOUR_USERNAME/FinScan-Sentiment-Analyzer.git)
 pip install pandas scikit-learn nltk imbalanced-learn seaborn ipywidgets
+```
+# Data Set Link:
+```
+https://www.kaggle.com/datasets/abdullahbinshahbaz/analyst-ratings-processed-csv
+```
+# 📝 Analysis & Methodology
+This project followed a rigorous Data Science lifecycle:
 
-Author: Abdullah-Bin-Shahbaz
+* **Preprocessing:** Lowercasing, regex-based special character removal, and stopword filtering (preserving directional words like "up/down").
 
+* **Labeling Engine:** Developed a hybrid labeling function combining VADER compound scores with "Hard Rules" for critical financial terminology.
+
+* **Vectorization:** Transformed cleaned text into numerical format using TfidfVectorizer with an ngram_range of (1, 2).
+
+* **Evaluation:** Validated results using a 20% hold-out test set and cross-referencing with a manual sentiment check.
+## Author: Abdullah-Bin-Shahbaz
 Academic Institution: FAST School of Management, NUCES (Lahore Campus)
 
